@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -18,11 +19,7 @@ public class SampleController {
         return "index";
     }
 
-    private List<String> getListOfStrings(){
-        List<String> sampleList = new ArrayList<String>();
-        sampleList.add("Bacon");
-        sampleList.add("Eggs");
-        sampleList.add("Gofer");
-        return sampleList;
+    private List<String> getListOfStrings() {
+        return Arrays.asList("Bacon", "Eggs", "Gofer");
     }
 }
