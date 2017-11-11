@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!--Need to terminate 'meta' tag with / before tag closing symbol (>)-->
+    <meta charset="UTF-8"/>
+    <!--Title passed in as thymeleaf variable from our controller-->
+    <title th:text="${title}"></title>
+</head>
+<body>
+
+<!--Content is also passed in as thymeleaf variable from our controller-->
+<h2 th:text="${content}"></h2>
+
+<!--Take a list of objects (Strings in this case) and print each using thymeleaf-->
+<ul th:each="string : ${listOfStrings}">
+    <li th:text="${string}"></li>
+</ul>
+
+</body>
+</html>
