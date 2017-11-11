@@ -18,6 +18,13 @@ public class SampleController {
         return "index";
     }
 
+    @RequestMapping("/hi")
+    public String anotherController(Model model) {
+        model.addAttribute("title", "This is another controller");
+        model.addAttribute("content", "Hi :)");
+        return "index";
+    }
+
     private List<String> getListOfStrings() {
         return Arrays.asList("Bacon", "Eggs", "Gofer");
     }
