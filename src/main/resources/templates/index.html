@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<!--Content is also passed in as thymeleaf variable from our controller-->
-<h2 th:text="${content}"></h2>
+    <!--Content is also passed in as thymeleaf variable from our controller-->
+    <h2 th:text="${content}"></h2>
 
-<!--Take a list of objects (Strings in this case) and print each using thymeleaf-->
-<ul th:each="string : ${listOfStrings}">
-    <li th:text="${string}"></li>
-</ul>
+    <!--Take a list of objects (Strings in this case) and print each using thymeleaf-->
+    <ul th:each="string : ${listOfStrings}">
+        <li th:text="${string}"></li>
+    </ul>
 
 </body>
 </html>
