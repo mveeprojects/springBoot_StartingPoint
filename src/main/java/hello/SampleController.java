@@ -1,13 +1,24 @@
 package hello;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
 import java.io.IOException;
 
-@RestController
+@Controller
 public class SampleController {
 
-    @RequestMapping("/")
-    public String home() throws IOException {
-        return "Hello World!";
+    @GetMapping("/greeting")
+    public String greetingForm(Model model) {
+        model.addAttribute("greeting", new Greeting());
+        return "greeting";
+    }
+
+    @PostMapping("/greeting")
+    public String greetingSubmit(@ModelAttribute Greeting greeting) {
+        return "result";
     }
 }
