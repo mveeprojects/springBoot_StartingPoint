@@ -3,7 +3,7 @@ package hello;
 public class Greeting {
 
     private long id;
-    private String content = "";
+    private String content;
 
     public long getId() {
         return id;

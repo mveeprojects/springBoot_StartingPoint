@@ -18,11 +18,11 @@
 </div>
 
 <div th:switch="${greeting.content}">
-    <p th:case="''">default content</p>
+    <p th:case="null">default content</p>
     <p th:case="*" th:text="${greeting.content}"></p>
 </div>
 
-<a href="/">Start again</a>
+<div th:if="${greeting.content != null}" th:text="'content set'">content not set</div>
 
 </body>
 </html>
