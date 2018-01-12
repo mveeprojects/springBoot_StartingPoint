@@ -7,7 +7,7 @@ Run using __./mvnw clean compile spring-boot:run__
 
 ## Docker
 
-* mvn clean package docker:build
+* ./mvnw clean package docker:build
 * docker images
 * docker run -d -p 8080:8080 <imageId>
 * docker ps
