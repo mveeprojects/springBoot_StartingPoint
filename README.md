@@ -4,7 +4,7 @@ Basic starting point created while writing a blog post on Spring Boot
 * ./mvnw clean package
 * docker build .
 * docker images
-* docker run -d -p8080:8080 -p1234:1234 <imageid>
+* docker run -d -p8080:8080 -p1234:1234 __imageid__
 
 http://localhost:8080 -> app endpoint
 
