@@ -1,6 +1,5 @@
 # springBoot_StartingPoint
-Basic starting point created while writing a blog post on Spring Boot
-
+To run with JVM/JMX metrics exposed:
 * ./mvnw clean package
 * docker build .
 * docker images
