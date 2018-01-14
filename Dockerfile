@@ -4,8 +4,10 @@ MAINTAINER Mark
 
 VOLUME /tmp
 
-ADD target/springbooted-1.0-SNAPSHOT.jar /app.jar
+ENV DIRPATH /usr/bin
 
-ENV JAVA_OPTS=""
+ADD ./target/springbooted-1.0-SNAPSHOT.jar /usr/bin/app.jar
+ADD ./jmx_exporter/config.yaml $DIRPATH/config.yaml
+ADD ./jmx_exporter/jmx_prometheus_javaagent-0.2.0.jar $DIRPATH/jmx.jar
 
-ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+ENTRYPOINT exec java -javaagent:$DIRPATH/jmx.jar=1234:$DIRPATH/config.yaml -jar $DIRPATH/app.jar
