@@ -1,0 +1,9 @@
+package hello;
+
+class SimpleFunctions {
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+}
