@@ -11,6 +11,6 @@ public class SimpleTests {
     @Test
     public void addTest() {
         int actual = add(2,3);
-        assertThat(actual, is(5));
+        assertThat(actual, is(6));
     }
 }
